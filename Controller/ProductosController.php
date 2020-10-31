@@ -36,7 +36,7 @@ class ProductosController{
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         require_once 'views/header.php';
-        require_once 'views/roles/borrar.php';
+        require_once 'views/productos/borrar.php';
         require_once 'views/footer.php';
     }
     /** Fin de llamado de la vistas */
@@ -85,11 +85,11 @@ class ProductosController{
         }
     }
 
-    public function BorrarIDRol(){
+    public function BorrarPro(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->deleteRol($this->model)){            
+        if($this->model->BorrarProducto($this->model)){            
             $texto = "Registro borrado exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

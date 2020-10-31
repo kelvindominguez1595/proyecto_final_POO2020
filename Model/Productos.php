@@ -77,10 +77,10 @@ class Productos{
         }
     }
     // Borrar
-    public function deleteRol($data){
+    public function BorrarProducto($data){
         try{
             // Comando SQL
-            $sql = "DELETE FROM roles_usuario  WHERE id = ?";
+            $sql = "DELETE FROM productos  WHERE id_producto = ?";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->id));
