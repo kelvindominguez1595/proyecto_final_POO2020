@@ -23,16 +23,16 @@ class ProductosController{
         require_once 'views/footer.php';
     }
 
-    public function EditarRol(){
+    public function EditarProduct(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         // crear el metodo para listar un dato especifico
         $data = $this->model->obtenerRegistro($id);
         require_once 'views/header.php';
-        require_once 'views/roles/editar.php';
+        require_once 'views/productos/editar.php';
         require_once 'views/footer.php';
     }
-    public function BorrarRol(){
+    public function BorrarProduct(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         require_once 'views/header.php';
@@ -63,21 +63,26 @@ class ProductosController{
         }
     }
 
-    public function ActualizarRol(){
+    public function ActualizarPro(){
         // capturo los valores enviados por post o get
-        $this->model->id = $_REQUEST['id'];
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
+        $this->model->id_producto         = $_REQUEST['id_producto'];
+        $this->model->id_categoria        = $_REQUEST['id_categoria'];
+        $this->model->id_marca_producto   = $_REQUEST['id_marca_producto'];
+        $this->model->NombreProducto      = $_REQUEST['NombreProducto'];
+        $this->model->imagen              = $_REQUEST['imagen'];
+        $this->model->cantidad            = $_REQUEST['cantidad'];
+        $this->model->precioVenta         = $_REQUEST['precioCompra'];
+        $this->model->precioCompra        = $_REQUEST['precioVenta'];
         // utilizamos el metodo de guardar de SQL
-        // if($this->model->actu($this->model)){
-        //     $texto = "Actualizó exitosamente";
-        //     $tipo = "success";
-        //     $this->model->SesionesMessage($texto, $tipo);
-        // }else{
-        //     $texto = "Ocurrio un error";
-        //     $tipo = "error";
-        //     $this->model->SesionesMessage($texto, $tipo);
-        // }
+        if($this->model->actualizarPro($this->model)){
+            $texto = "Actualizó exitosamente";
+            $tipo = "success";
+            $this->model->SesionesMessage($texto, $tipo);
+        }else{
+            $texto = "Ocurrio un error";
+            $tipo = "error";
+            $this->model->SesionesMessage($texto, $tipo);
+        }
     }
 
     public function BorrarIDRol(){

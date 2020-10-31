@@ -26,7 +26,7 @@ class Productos{
             $sql = "INSERT INTO productos(id_categoria, id_marca_producto, NombreProducto, imagen, cantidad, precioVenta, precioCompra) VALUES(?,?,?,?,?,?,?)";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->id_categoria, $data->id_marca_producto, $data->NombreProducto, $data->imagen, $data->cantidad, $data->precioVenta, $data->precioCompra ));
+            $resul = $pre->execute(array($data->id_categoria, $data->id_marca_producto, $data->NombreProducto, $data->imagen, $data->cantidad, $data->precioVenta, $data->precioCompra));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -50,7 +50,7 @@ class Productos{
     // Metodo para obtener un registro en especifico
     public function obtenerRegistro($id){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM roles_usuario WHERE id = ?");
+            $commd = $this->DB->prepare("SELECT * FROM productos WHERE id_producto = ?");
             $commd->execute(array($id));
             return $commd->fetch(PDO::FETCH_OBJ);
         }catch(Throwable $t){
@@ -59,14 +59,14 @@ class Productos{
     }
 
     // Actualizar
-    public function actualizarRol($data){
+    public function actualizarPro($data){
         try{
             // Comando SQL
-            $sql = "UPDATE roles_usuario SET nombre = ?, descripcion = ? WHERE id = ?";
+            $sql = "UPDATE productos SET id_categoria = ?, id_marca_producto = ?, NombreProducto = ?, imagen = ?, cantidad = ?, precioVenta = ?, precioCompra = ? WHERE id_producto = ?";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion, $data->id));
+            $resul = $pre->execute(array($data->id_categoria, $data->id_marca_producto, $data->NombreProducto, $data->imagen, $data->cantidad, $data->precioVenta, $data->precioCompra, $data->id_producto));
             if($resul > 0){ 
                 return true;
             }else{ 
