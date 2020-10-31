@@ -12,7 +12,7 @@
                 </button>
             </div>
       <?php } ?>
-      <a href="?view=Roles&action=NuevoRol" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-box fa-sm "></i> Agregar producto</a>
+      <a href="?view=Productos&action=NuevoProducto" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-box fa-sm "></i> Agregar producto</a>
     </div>
 
     <div class="card shadow mb-4">

@@ -10,7 +10,7 @@ class Productos{
     public $cantidad;
     public $precioVenta;
     public $precioCompra;
-    public $fechaCompra;
+
 
     public function __CONSTRUCT(){
         try{
@@ -20,14 +20,13 @@ class Productos{
         }
     }
 
-    public function RegistrarRol($data){
+    public function RegistrarProducto($data){
         try{
             // Comando SQL
-            $sql = "INSERT INTO roles_usuario(nombre, descripcion) VALUES(?,?)";
-
+            $sql = "INSERT INTO productos(id_categoria, id_marca_producto, NombreProducto, imagen, cantidad, precioVenta, precioCompra) VALUES(?,?,?,?,?,?,?)";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion));
+            $resul = $pre->execute(array($data->id_categoria, $data->id_marca_producto, $data->NombreProducto, $data->imagen, $data->cantidad, $data->precioVenta, $data->precioCompra ));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -98,7 +97,7 @@ class Productos{
     public function SesionesMessage($texto, $tipo){
         $_SESSION['texto'] = $texto;
         $_SESSION['tipo'] = $tipo;
-        header("Location: ?view=Roles");
+        header("Location: ?view=Productos");
     }
 
 }
