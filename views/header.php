@@ -50,7 +50,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-  <a class="nav-link" href="charts.html">
+  <a class="nav-link" href="?view=Productos">
     <i class="fas fa-fw fa-box"></i>
     <span>Productos</span></a>
 </li>
