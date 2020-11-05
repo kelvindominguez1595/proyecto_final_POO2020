@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tienda online PHP Y MySQL.</title>
+    <title>Tienda online 2020</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,7 +27,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">TEC SV STORE ONLINE <sup>2</sup></div>
+  <div class="sidebar-brand-text mx-3">ULS STORE SV SHOP ONLINE <sup>2</sup></div>
 </a>
 
 <!-- Divider -->
