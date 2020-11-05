@@ -37,7 +37,7 @@
 <li class="nav-item active">
   <a class="nav-link" href="index.html">
     <i class="fas fa-fw fa-home"></i>
-    <span>Inicio</span></a>
+    <span>HOME</span></a>
 </li>
 
 <!-- Divider -->
@@ -45,7 +45,7 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-  Interface
+  HOLA MUNDO
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
