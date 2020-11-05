@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">Actualizar Rol de Usuarios</h1>
+      <h1 class="h3 mb-0 text-gray-800">Actualizar Rol de Usuariossdasd</h1>
       <a href="?view=Roles&action=CrearRol" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-save fa-sm "></i> Crear nuevo rol</a>
     </div>
     <div clas="row">
