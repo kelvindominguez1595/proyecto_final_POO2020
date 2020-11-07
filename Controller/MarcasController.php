@@ -16,9 +16,9 @@ class MarcasController{
         require_once 'views/Marcas/index.php';
         require_once 'views/footer.php';
     }
-    public function NuevoRol(){
+    public function NuevoMarca(){
         require_once 'views/header.php';
-        require_once 'views/roles/crear.php';
+        require_once 'views/Marcas/crear.php';
         require_once 'views/footer.php';
     }
 
