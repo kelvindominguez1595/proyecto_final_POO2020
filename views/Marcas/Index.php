@@ -42,7 +42,6 @@
                   foreach($this->model->ListarMarcas() as $item){  ?>                
                     <tr>
                       <td><?php echo $i; ?></td>
-                      <td><?php echo $item->id; ?></td>
                       <td><?php echo $item->nombre_marca; ?></td>
                       <td>
                           

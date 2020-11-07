@@ -3,8 +3,7 @@ class Marcas{
     # atributos 
     private $DB; // para la conexion de la base de datos
     public $id;
-    public $nombre;
-    public $descripcion;
+    public $nombre_marca;
 
     public function __CONSTRUCT(){
         try{
@@ -31,10 +30,10 @@ class Marcas{
             die($t->getMessage());
         }
     }
-    // Metodo para listar los roles
-    public function ListarRoles(){
+    // Metodo para listar los marcas
+    public function ListarMarcas(){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM roles_usuario");
+            $commd = $this->DB->prepare("SELECT * FROM marcas");
             $commd->execute();
             return $commd->fetchAll(PDO::FETCH_OBJ);
         }catch(Throwable $t){

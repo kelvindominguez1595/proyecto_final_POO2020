@@ -1,13 +1,13 @@
 <?php
 // importamos nuestro modelo
 require_once 'Model/Marcas.php';
-class UsuariosController{
+class MarcasController{
     // para accender al modelo y sus atributos
     private $model;
 
     // Constructos
     public function __CONSTRUCT(){
-        $this->model = new Roles();
+        $this->model = new Marcas();
     }
 
    /** Inicio de llamado de la vistas */
