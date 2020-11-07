@@ -56,6 +56,12 @@
 </li>
 
 <li class="nav-item">
+  <a class="nav-link" href="?view=Usuarios">
+    <i class="fas fa-fw fa-comment-alt"></i>
+    <span>Usuarios</span></a>
+</li>
+
+<li class="nav-item">
   <a class="nav-link" href="?view=Productos">
     <i class="fas fa-fw fa-dollar-sign"></i>
     <span>Ventas</span></a>
