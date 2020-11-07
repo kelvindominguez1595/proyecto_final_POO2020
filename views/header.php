@@ -57,7 +57,7 @@
 
 <li class="nav-item">
   <a class="nav-link" href="?view=Usuarios">
-    <i class="fas fa-fw fa-comment-alt"></i>
+    <i class="fas fa-user fa-comment-alt"></i>
     <span>Usuarios</span></a>
 </li>
 
