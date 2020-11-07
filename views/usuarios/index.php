@@ -12,7 +12,7 @@
                 </button>
             </div>
       <?php } ?>
-      <a href="?view=Roles&action=NuevoRol" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-user fa-sm "></i> Crear Usuarios</a>
+      <a href="?view=Usuarios&action=NuevoUsuarios" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-user fa-sm "></i> Crear Usuarios</a>
     </div>
 
     <div class="card shadow mb-4">
@@ -60,8 +60,8 @@
                       <td><?php echo $item->roles_id; ?></td>
                       <td>
                           
-                        <a href="?view=Roles&action=EditarRol&id=<?php echo $item->id;?>" class="btn btn-primary btn-circle"> <i class="fas fa-pencil-alt" data-toggle="tooltip" data-placement="left" title="Editar Registro"></i></a>
-                        <a href="?view=Roles&action=BorrarRol&id=<?php echo $item->id;?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="right" title="Borrar Registro"> <i class="fas fa-trash"></i></a>
+                        <a href="?view=Usuarios&action=EditarUsuarios&id=<?php echo $item->id;?>" class="btn btn-primary btn-circle"> <i class="fas fa-pencil-alt" data-toggle="tooltip" data-placement="left" title="Editar Registro"></i></a>
+                        <a href="?view=Usuarios&action=BorrarUsuarios&id=<?php echo $item->id;?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="right" title="Borrar Registro"> <i class="fas fa-trash"></i></a>
                       </td>
                     </tr>
                 <?php $i++;} ?>

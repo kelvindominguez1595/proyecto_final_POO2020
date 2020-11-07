@@ -16,9 +16,9 @@ class UsuariosController{
         require_once 'views/usuarios/index.php';
         require_once 'views/footer.php';
     }
-    public function NuevoRol(){
+    public function NuevoUsuarios(){
         require_once 'views/header.php';
-        require_once 'views/roles/crear.php';
+        require_once 'views/usuarios/crear.php';
         require_once 'views/footer.php';
     }
 
