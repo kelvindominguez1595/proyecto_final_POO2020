@@ -5,7 +5,8 @@ class Usuarios{
     public $id;
     public $nombres;
     public $direccion;
-    private $pass;
+    public $usuario;
+    public $pass;
     public $telefono;
     public $roles_id;
 
@@ -35,9 +36,9 @@ class Usuarios{
         }
     }
     // Metodo para listar los roles
-    public function ListarRoles(){
+    public function ListarUsuarios(){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM roles_usuario");
+            $commd = $this->DB->prepare("SELECT * FROM usuarios");
             $commd->execute();
             return $commd->fetchAll(PDO::FETCH_OBJ);
         }catch(Throwable $t){

@@ -52,8 +52,12 @@
                   foreach($this->model->ListarUsuarios() as $item){  ?>                
                     <tr>
                       <td><?php echo $i; ?></td>
-                      <td><?php echo $item->nombre; ?></td>
-                      <td><?php echo $item->descripcion; ?></td>
+                      <td><?php echo $item->nombres; ?></td>
+                      <td><?php echo $item->direccion; ?></td>
+                      <td><?php echo $item->usuario; ?></td>
+                      <td><?php echo $item->pass; ?></td>
+                      <td><?php echo $item->telefono; ?></td>
+                      <td><?php echo $item->roles_id; ?></td>
                       <td>
                           
                         <a href="?view=Roles&action=EditarRol&id=<?php echo $item->id;?>" class="btn btn-primary btn-circle"> <i class="fas fa-pencil-alt" data-toggle="tooltip" data-placement="left" title="Editar Registro"></i></a>

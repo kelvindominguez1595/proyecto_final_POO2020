@@ -7,7 +7,7 @@ class UsuariosController{
 
     // Constructos
     public function __CONSTRUCT(){
-        $this->model = new Roles();
+        $this->model = new Usuarios();
     }
 
    /** Inicio de llamado de la vistas */
