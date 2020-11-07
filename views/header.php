@@ -67,6 +67,11 @@
     <span>Ventas</span></a>
 </li>
 
+<li class="nav-item">
+  <a class="nav-link" href="?view=Marcas">
+    <i class="fas fa-fw fa-box"></i>
+    <span>Marcas</span></a>
+</li>
 
 <li class="nav-item">
   <a class="nav-link" href="?view=Productos">
