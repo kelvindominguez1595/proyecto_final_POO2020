@@ -69,7 +69,7 @@
 
 <li class="nav-item">
   <a class="nav-link" href="?view=Marcas">
-    <i class="fas fa-fw fa-box"></i>
+  <i class="fab fa-adn"></i>
     <span>Marcas</span></a>
 </li>
 
