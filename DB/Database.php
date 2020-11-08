@@ -4,7 +4,7 @@ class Database
     private static $dbName = 'tienda_online';
     private static $dbHost = 'localhost';
     private static $dbUser = 'root';
-    private static $password = '74353051';
+    private static $password = '';
      // si tiene contraseña escribirlar
 
     private static $cont = null;
