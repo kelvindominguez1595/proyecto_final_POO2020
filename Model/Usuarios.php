@@ -18,14 +18,14 @@ class Usuarios{
         }
     }
 
-    public function RegistrarRol($data){
+    public function RegistrarUsuario($data){
         try{
             // Comando SQL
-            $sql = "INSERT INTO roles_usuario(nombre, descripcion) VALUES(?,?)";
+            $sql = "INSERT INTO usuarios(nombres, direccion, usuario, pass, telefono, roles_id) VALUES(?,?,?,?,?,?)";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion));
+            $resul = $pre->execute(array($data->nombres, $data->direccion, $data->usuario, $data->pass, $data->telefono, $data->roles_id));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -96,7 +96,7 @@ class Usuarios{
     public function SesionesMessage($texto, $tipo){
         $_SESSION['texto'] = $texto;
         $_SESSION['tipo'] = $tipo;
-        header("Location: ?view=Roles");
+        header("Location: ?view=Usuarios");
     }
 
 }

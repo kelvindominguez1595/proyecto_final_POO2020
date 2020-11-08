@@ -43,13 +43,17 @@ class UsuariosController{
     /** Metodos CRUD */
     
     
-    public function CrearRol(){
+    public function CrearUsuario(){
         // capturo los valores enviados por post o get
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
-
+        $this->model->nombres  =$_REQUEST['nombres'];
+        $this->model->direccion = $_REQUEST['direccion'];
+        $this->model->usuario = $_REQUEST['usuario'];
+        $this->model->pass = $_REQUEST['pass'];
+        $this->model->telefono = $_REQUEST['telefono'];
+        $this->model->roles_id = $_REQUEST['roles_id'];
+        
         // utilizamos el metodo de guardar de SQL
-        if($this->model->RegistrarRol($this->model)){
+        if($this->model->RegistrarUsuario($this->model)){
             $texto = "Registro exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);
