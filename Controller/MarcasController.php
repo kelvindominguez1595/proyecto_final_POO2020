@@ -31,11 +31,11 @@ class MarcasController{
         require_once 'views/Marcas/editar.php';
         require_once 'views/footer.php';
     }
-    public function BorrarMarca(){
+    public function BorrarMarcas(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         require_once 'views/header.php';
-        require_once 'views/roles/borrar.php';
+        require_once 'views/Marcas/borrar.php';
         require_once 'views/footer.php';
     }
     /** Fin de llamado de la vistas */
@@ -76,11 +76,11 @@ class MarcasController{
         }
     }
 
-    public function BorrarIDRol(){
+    public function BorrarMarca(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->deleteRol($this->model)){            
+        if($this->model->BorrarMarc($this->model)){            
             $texto = "Registro borrado exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

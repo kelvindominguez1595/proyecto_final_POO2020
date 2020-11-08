@@ -71,10 +71,10 @@ class Marcas{
         }
     }
     // Borrar
-    public function deleteRol($data){
+    public function BorrarMarc($data){
         try{
             // Comando SQL
-            $sql = "DELETE FROM roles_usuario  WHERE id = ?";
+            $sql = "DELETE FROM marcas  WHERE id = ?";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->id));
