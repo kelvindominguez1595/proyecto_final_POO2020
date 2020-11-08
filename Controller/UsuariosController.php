@@ -22,13 +22,13 @@ class UsuariosController{
         require_once 'views/footer.php';
     }
 
-    public function EditarRol(){
+    public function EditarUsuarios(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         // crear el metodo para listar un dato especifico
         $data = $this->model->obtenerRegistro($id);
         require_once 'views/header.php';
-        require_once 'views/roles/editar.php';
+        require_once 'views/usuarios/editar.php';
         require_once 'views/footer.php';
     }
     public function BorrarRol(){
@@ -64,13 +64,18 @@ class UsuariosController{
         }
     }
 
-    public function ActualizarRol(){
+    public function ActualizarUsuario(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
+        $this->model->nombres  =$_REQUEST['nombres'];
+        $this->model->direccion = $_REQUEST['direccion'];
+        $this->model->usuario = $_REQUEST['usuario'];
+        $this->model->pass = $_REQUEST['pass'];
+        $this->model->telefono = $_REQUEST['telefono'];
+        $this->model->roles_id = $_REQUEST['roles_id'];
+        
         // utilizamos el metodo de guardar de SQL
-        if($this->model->RegistrarRol($this->model)){
+        if($this->model->actualizarUsuario($this->model)){
             $texto = "Actualizó exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);
