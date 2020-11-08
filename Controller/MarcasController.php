@@ -22,16 +22,16 @@ class MarcasController{
         require_once 'views/footer.php';
     }
 
-    public function EditarRol(){
+    public function EditarMarcas(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         // crear el metodo para listar un dato especifico
         $data = $this->model->obtenerRegistro($id);
         require_once 'views/header.php';
-        require_once 'views/roles/editar.php';
+        require_once 'views/Marcas/editar.php';
         require_once 'views/footer.php';
     }
-    public function BorrarRol(){
+    public function BorrarMarca(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         require_once 'views/header.php';
@@ -59,13 +59,13 @@ class MarcasController{
         }
     }
 
-    public function ActualizarRol(){
+    public function ActualizarMarcas(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
+        $this->model->nombre_marca = $_REQUEST['nombre_marca'] ;
+
         // utilizamos el metodo de guardar de SQL
-        if($this->model->RegistrarRol($this->model)){
+        if($this->model->ActualizarMar($this->model)){
             $texto = "Actualizó exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

@@ -44,7 +44,7 @@ class Marcas{
     // Metodo para obtener un registro en especifico
     public function obtenerRegistro($id){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM roles_usuario WHERE id = ?");
+            $commd = $this->DB->prepare("SELECT * FROM marcas WHERE id = ?");
             $commd->execute(array($id));
             return $commd->fetch(PDO::FETCH_OBJ);
         }catch(Throwable $t){
@@ -53,14 +53,14 @@ class Marcas{
     }
 
     // Actualizar
-    public function actualizarRol($data){
+    public function actualizarMar($data){
         try{
             // Comando SQL
-            $sql = "UPDATE roles_usuario SET nombre = ?, descripcion = ? WHERE id = ?";
+            $sql = "UPDATE marcas SET nombre_marca = ? WHERE id = ?";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion, $data->id));
+            $resul = $pre->execute(array($data->nombre_marca, $data ->id));;
             if($resul > 0){ 
                 return true;
             }else{ 
