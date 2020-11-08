@@ -31,11 +31,11 @@ class UsuariosController{
         require_once 'views/usuarios/editar.php';
         require_once 'views/footer.php';
     }
-    public function BorrarRol(){
+    public function BorrarUsuarios(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         require_once 'views/header.php';
-        require_once 'views/roles/borrar.php';
+        require_once 'views/usuarios/borrar.php';
         require_once 'views/footer.php';
     }
     /** Fin de llamado de la vistas */
@@ -86,11 +86,11 @@ class UsuariosController{
         }
     }
 
-    public function BorrarIDRol(){
+    public function BorrarUsuario(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->deleteRol($this->model)){            
+        if($this->model->BorrarUsuarios($this->model)){            
             $texto = "Registro borrado exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

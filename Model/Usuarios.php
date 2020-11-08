@@ -76,10 +76,10 @@ class Usuarios{
         }
     }
     // Borrar
-    public function deleteRol($data){
+    public function BorrarUsuarios($data){
         try{
             // Comando SQL
-            $sql = "DELETE FROM roles_usuario  WHERE id = ?";
+            $sql = "DELETE FROM usuarios WHERE id = ?";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->id));
