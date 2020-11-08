@@ -43,13 +43,12 @@ class MarcasController{
     /** Metodos CRUD */
     
     
-    public function CrearRol(){
+    public function CrearMarcas(){
         // capturo los valores enviados por post o get
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
+        $this->model->nombre_marca = $_REQUEST['nombre_marca'] ;
 
         // utilizamos el metodo de guardar de SQL
-        if($this->model->RegistrarRol($this->model)){
+        if($this->model->RegistrarMarca($this->model)){
             $texto = "Registro exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

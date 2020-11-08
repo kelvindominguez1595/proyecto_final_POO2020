@@ -13,14 +13,14 @@ class Marcas{
         }
     }
 
-    public function RegistrarRol($data){
+    public function RegistrarMarca($data){
         try{
             // Comando SQL
-            $sql = "INSERT INTO roles_usuario(nombre, descripcion) VALUES(?,?)";
+            $sql = "INSERT INTO marcas(nombre_marca) VALUES(?)";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion));
+            $resul = $pre->execute(array($data->nombre_marca));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -91,7 +91,7 @@ class Marcas{
     public function SesionesMessage($texto, $tipo){
         $_SESSION['texto'] = $texto;
         $_SESSION['tipo'] = $tipo;
-        header("Location: ?view=Roles");
+        header("Location: ?view=marcas");
     }
 
 }
