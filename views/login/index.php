@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 
@@ -37,7 +37,23 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                      <?php if(isset($_SESSION['texto'])){?>
+                      <div class="alert alert-<?php if($_SESSION['tipo'] == "success"){ echo "success";}else{echo "danger"; }?> alert-dismissible fade show" role="alert">
+                      <strong>
+                      <?php 
+                      if($_SESSION['tipo'] == "success"){ 
+                      echo "Excelente!!!";
+                      }else{
+                      echo "Ooops!"; 
+                      }?> 
+                      </strong> <?php echo $_SESSION['texto'];?>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      <?php unset($_SESSION["texto"]); unset($_SESSION["tipo"]); ?>
+                      </button>
+                      </div>
+                      <?php } ?>
+                    <h1 class="h4 text-gray-900 mb-4">Bienvenido!</h1>
                   </div>
                   <form class="user" method="POST" action="?view=Autentificacion&action=autentificar">
                     <div class="form-group">
