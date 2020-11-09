@@ -28,5 +28,14 @@ class AutentificacionController{
         // Creamos la sesión de nuestro usuario logueado
         $this->model->Sesion($auten);
     }
+
+    public function validAuthen(){
+        $this->model->verificarAuten();
+    }
+
+    public function dataUser(){
+        $id = $_SESSION['id'];
+        return $this->model->datosUsuariosLogueado($id);
+    }
 }
 ?>
