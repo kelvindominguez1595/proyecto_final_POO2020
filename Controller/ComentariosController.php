@@ -16,9 +16,9 @@ class ComentariosController{
         require_once 'views/comentarios/index.php';
         require_once 'views/footer.php';
     }
-    public function NuevoRol(){
+    public function NuevoComentario(){
         require_once 'views/header.php';
-        require_once 'views/roles/crear.php';
+        require_once 'views/comentarios/crear.php';
         require_once 'views/footer.php';
     }
 
@@ -43,13 +43,15 @@ class ComentariosController{
     /** Metodos CRUD */
     
     
-    public function CrearRol(){
+    public function CrearComentario(){
         // capturo los valores enviados por post o get
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
+        $this->model->producto_id = $_REQUEST['producto_id'];;
+        $this->model->rating = $_REQUEST['rating'];;
+        $this->model->comentario = $_REQUEST['comentario'];;
+   
 
         // utilizamos el metodo de guardar de SQL
-        if($this->model->RegistrarRol($this->model)){
+        if($this->model->RegistrarComentario($this->model)){
             $texto = "Registro exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

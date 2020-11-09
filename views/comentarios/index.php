@@ -12,7 +12,7 @@
                 </button>
             </div>
       <?php } ?>
-      <a href="?view=Roles&action=NuevoRol" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-save fa-sm "></i> Crear comentarios</a>
+      <a href="?view=Comentarios&action=NuevoComentario" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-save fa-sm "></i> Crear comentarios</a>
     </div>
 
     <div class="card shadow mb-4">
@@ -26,7 +26,7 @@
                     <tr>                       
                       <th>#</th>
                       <th>Producto_id</th>
-                      <th>Rainting</th>
+                      <th>Rating</th>
                       <th>Comentario</th>
                       <th>Fecha</th>
                       <th>Opciones</th>
@@ -37,7 +37,7 @@
                     <tr>
                       <th>#</th>
                       <th>Producto_id</th>
-                      <th>Rainting</th>
+                      <th>Rating</th>
                       <th>Comentario</th>
                       <th>Fecha</th>
                       <th>Opciones</th>
@@ -50,7 +50,7 @@
                     <tr>
                       <td><?php echo $i; ?></td>
                       <td><?php echo $item->producto_id; ?></td>
-                      <td><?php echo $item->rainting; ?></td>
+                      <td><?php echo $item->rating; ?></td>
                       <td><?php echo $item->comentario; ?></td>
                       <td><?php echo $item->fecha; ?></td>
                       

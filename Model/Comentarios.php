@@ -4,9 +4,9 @@ class Comentarios{
     private $DB; // para la conexion de la base de datos
     public $id;
     public $producto_id;
-    public $rainting;
+    public $rating;
     public $comentario;
-    public $fecha;
+   
     public function __CONSTRUCT(){
         try{
             $this->DB = Database::Conexion();
@@ -15,14 +15,14 @@ class Comentarios{
         }
     }
 
-    public function RegistrarRol($data){
+    public function RegistrarComentario($data){
         try{
             // Comando SQL
-            $sql = "INSERT INTO roles_usuario(nombre, descripcion) VALUES(?,?)";
+            $sql = "INSERT INTO comentarios(producto_id, rating, comentario) VALUES(?,?,?)";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion));
+            $resul = $pre->execute(array($data->producto_id, $data->rating, $data->comentario));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -93,7 +93,7 @@ class Comentarios{
     public function SesionesMessage($texto, $tipo){
         $_SESSION['texto'] = $texto;
         $_SESSION['tipo'] = $tipo;
-        header("Location: ?view=Roles");
+        header("Location: ?view=Comentarios");
     }
 
 }
