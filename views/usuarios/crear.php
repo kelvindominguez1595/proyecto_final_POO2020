@@ -16,17 +16,17 @@
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <label for="nombre">Nombres</label>
-                            <input type="text" name="nombres" class="form-control form-control-user" required id="exampleFirstName" placeholder="Nombres">
+                            <input type="text" name="nombres" class="form-control" required id="nombres" placeholder="Nombres">
                         </div>
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <label for="apellidos">apellidos</label>
-                            <input type="text" name="apellidos" class="form-control form-control-user" required id="exampleFirstName" placeholder="Apellidos">
+                            <input type="text" name="apellidos" class="form-control" required id="apellidos" placeholder="Apellidos">
                         </div>  
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-12 mb-3 mb-sm-0">
                             <label for="direccion">Dirección</label>
-                            <input type="text" name="direccion"  class="form-control form-control-user"  required placeholder="Dirección">
+                            <input type="text" name="direccion"  class="form-control"  required placeholder="Dirección">
                         </div>
                     </div>
                     <!-- Datos correo electronico  -->

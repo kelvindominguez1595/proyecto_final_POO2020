@@ -55,43 +55,42 @@ class UsuariosController{
 
     public function CrearUsuario(){
         // capturo los valores enviados por post o get        
-        // if(count($_FILES) > 0){
-        //     $this->model->nombres      = $_REQUEST['nombres'];
-        //     $this->model->apellidos    = $_REQUEST['apellidos'];
-        //     $this->model->direccion    = $_REQUEST['direccion'];
-        //     $this->model->email        = $_REQUEST['email'];
-        //     $this->model->telefono     = $_REQUEST['telefono'];
-        //     $this->model->pass         = $_REQUEST['pass'];
-        //     $this->model->sexo         = $_REQUEST['sexo'];
-        //     $this->model->roles_id     = $_REQUEST['roles_id'];
-        //     // extraemo el primer nombre del para el usuario
-        //     $nombre = explode(" ", $_REQUEST['nombres']);
-        //     $this->model->usuario      = strtolower($nombre[0]);
+        if(count($_FILES) > 0){
+            $this->model->nombres      = $_REQUEST['nombres'];
+            $this->model->apellidos    = $_REQUEST['apellidos'];
+            $this->model->direccion    = $_REQUEST['direccion'];
+            $this->model->email        = $_REQUEST['email'];
+            $this->model->telefono     = $_REQUEST['telefono'];
+            $this->model->pass         = $_REQUEST['pass'];
+            $this->model->sexo         = $_REQUEST['sexo'];
+            $this->model->roles_id     = $_REQUEST['roles_id'];
+            // extraemo el primer nombre del para el usuario
+            $nombre = explode(" ", $_REQUEST['nombres']);
+            $this->model->usuario      = strtolower($nombre[0]);
 
-        //     $nameImgan = $_FILES['imagen']['name'];
-        //     $typeImagen = $_FILES['imagen']['type'];
-        //     $tmpImagen = $_FILES['imagen']['tmp_name'];
-        //     if($typeImagen == 'image/jpeg' || $typeImagen == 'image/jpg' || $typeImagen == 'image/png' || $typeImagen == 'image/gif'){
-        //         // ruta de donde guardaremos la imagen
-        //         $res = explode(".", $nameImgan);
-        //         $extension = $res[count($res)-1];
-        //         $newNameImagen = date('s').rand(1,99).".".$extension;
-        //         $destino = "assets/img/Image_Perfil/".$newNameImagen;
-        //         copy($tmpImagen, $destino); // copiamos los archivos al destino
-        //         $this->model->imagen              = $newNameImagen;// llenamos el cmapo imagen
-        //         // utilizamos el metodo de guardar de SQL 
-        //         if($this->model->RegistrarUsuario($this->model)){
-        //             $texto = "Registro exitosamente ";
-        //             $tipo = "success";
-        //             $this->model->SesionesMessage($texto, $tipo, $this->vista);
-        //         }else{
-        //             $texto = "Ocurrio un error ";
-        //             $tipo = "error";
-        //             $this->model->SesionesMessage($texto, $tipo, $this->vista);
-        //         }
-        //     }
-        // }
-
+            $nameImgan = $_FILES['imagen']['name'];
+            $typeImagen = $_FILES['imagen']['type'];
+            $tmpImagen = $_FILES['imagen']['tmp_name'];
+            if($typeImagen == 'image/jpeg' || $typeImagen == 'image/jpg' || $typeImagen == 'image/png' || $typeImagen == 'image/gif'){
+                // ruta de donde guardaremos la imagen
+                $res = explode(".", $nameImgan);
+                $extension = $res[count($res)-1];
+                $newNameImagen = date('s').rand(1,99).".".$extension;
+                $destino = "assets/img/Image_Perfil/".$newNameImagen;
+                copy($tmpImagen, $destino); // copiamos los archivos al destino
+                $this->model->imagen              = $newNameImagen;// llenamos el cmapo imagen
+                // utilizamos el metodo de guardar de SQL 
+                if($this->model->RegistrarUsuario($this->model)){
+                    $texto = "Registro exitosamente ";
+                    $tipo = "success";
+                    $this->model->SesionesMessage($texto, $tipo, $this->vista);
+                }else{
+                    $texto = "Ocurrio un error ";
+                    $tipo = "error";
+                    $this->model->SesionesMessage($texto, $tipo, $this->vista);
+                }
+            }
+        }
     }
 
     public function ActualizarPro(){
