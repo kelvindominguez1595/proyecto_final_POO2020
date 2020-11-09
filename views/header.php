@@ -104,8 +104,8 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Utilidad Personalizadas:</h6>
       <a class="collapse-item" href="?view=Roles">Roles de usuarios</a>
-      <a class="collapse-item" href="utilities-border.html">Categorias</a>
-      <a class="collapse-item" href="utilities-animation.html">Marcas</a>
+      <a class="collapse-item" href="utilities-.html">Categorias</a>
+      <a class="collapse-item" href="?view=Marcas">Marcas</a>
     </div>
   </div>
 </li>
