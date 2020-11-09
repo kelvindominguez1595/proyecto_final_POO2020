@@ -4,8 +4,7 @@ class Database
     private static $dbName = 'tienda_online';
     private static $dbHost = 'localhost';
     private static $dbUser = 'root';
-    private static $password = '';
-     // si tiene contraseña escribirlar
+    private static $password = ''; // si tiene contraseña escribirlar
 
     private static $cont = null;
 
@@ -13,7 +12,7 @@ class Database
         die("La funcion no ha sido inicializada");
     }
 
-    public function Conexion(){
+    public static function Conexion(){
         if(null == self::$cont){
             // manejador de exepciones
             try{
