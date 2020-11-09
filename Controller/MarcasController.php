@@ -5,7 +5,7 @@ class MarcasController{
     // para accender al modelo y sus atributos
     private $model;
 
-    // Constructos
+    // Constructor
     public function __CONSTRUCT(){
         $this->model = new Marcas();
     }
@@ -13,40 +13,38 @@ class MarcasController{
    /** Inicio de llamado de la vistas */
     public function Index(){
         require_once 'views/header.php';
-        require_once 'views/Marcas/index.php';
-        require_once 'views/footer.php';
-    }
-    public function NuevoMarca(){
-        require_once 'views/header.php';
-        require_once 'views/Marcas/crear.php';
+        require_once 'views/marcas/index.php';
         require_once 'views/footer.php';
     }
 
-    public function EditarMarcas(){
+    public function NuevoMarca(){
+        require_once 'views/header.php';
+        require_once 'views/marcas/crear.php';
+        require_once 'views/footer.php';
+    }
+
+    public function EditarMarca(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         // crear el metodo para listar un dato especifico
         $data = $this->model->obtenerRegistro($id);
         require_once 'views/header.php';
-        require_once 'views/Marcas/editar.php';
+        require_once 'views/marcas/editar.php';
         require_once 'views/footer.php';
     }
-    public function BorrarMarcas(){
+    public function BorrarMarca(){
         // Capturamos el id enviado por get
-        $id = $_REQUEST['id'];
+        $id = $_REQUEST['nombre_marca'];
         require_once 'views/header.php';
-        require_once 'views/Marcas/borrar.php';
+        require_once 'views/marcas/borrar.php';
         require_once 'views/footer.php';
     }
     /** Fin de llamado de la vistas */
 
-    /** Metodos CRUD */
-    
-    
-    public function CrearMarcas(){
+    /** Metodos CRUD */   
+    public function RegistrarMarca(){
         // capturo los valores enviados por post o get
-        $this->model->nombre_marca = $_REQUEST['nombre_marca'] ;
-
+        $this->model->nombre_marca   = $_REQUEST['nombre_marca'];
         // utilizamos el metodo de guardar de SQL
         if($this->model->RegistrarMarca($this->model)){
             $texto = "Registro exitosamente";
@@ -59,13 +57,11 @@ class MarcasController{
         }
     }
 
-    public function ActualizarMarcas(){
+    public function ActualizarMarc(){
         // capturo los valores enviados por post o get
-        $this->model->id = $_REQUEST['id'];
-        $this->model->nombre_marca = $_REQUEST['nombre_marca'] ;
-
+        $this->model->nombre_marca   = $_REQUEST['nombre_marca'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->ActualizarMar($this->model)){
+        if($this->model->actualizarMarca($this->model)){
             $texto = "Actualizó exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);
@@ -76,12 +72,12 @@ class MarcasController{
         }
     }
 
-    public function BorrarMarca(){
+    public function BorrarMarc(){
         // capturo los valores enviados por post o get
-        $this->model->id = $_REQUEST['id'];
+        $this->model->id = $_REQUEST['nombre_marca'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->BorrarMarc($this->model)){            
-            $texto = "Registro borrado exitosamente";
+        if($this->model->BorrarMarca($this->model)){            
+            $texto = "Marca borrada exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);
         }else{
