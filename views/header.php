@@ -1,19 +1,26 @@
+<?php
+  include_once 'Controller/AutentificacionController.php';
+  $au = new AutentificacionController();
+  $au->validAuthen();
+  $data = $au->dataUser();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tienda online 2020</title>
-
+    <title>Panel Control | 2020</title>
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="assets/css/icheck-bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -27,7 +34,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">ULS STORE SV SHOP ONLINE <sup>2</sup></div>
+  <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
 </a>
 
 <!-- Divider -->
@@ -35,9 +42,9 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-  <a class="nav-link" href="index.html">
+  <a class="nav-link" href="?view=Home">
     <i class="fas fa-fw fa-home"></i>
-    <span>HOME</span></a>
+    <span>Inicio</span></a>
 </li>
 
 <!-- Divider -->
@@ -45,7 +52,7 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-   !!!HOLA MUNDO !!!
+  Interface
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
@@ -56,27 +63,28 @@
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="?view=Usuarios">
-    <i class="fas fa-user fa-comment-alt"></i>
-    <span>Usuarios</span></a>
-</li>
-
-<li class="nav-item">
-  <a class="nav-link" href="?view=Productos">
+  <a class="nav-link" href="?view=Ventas">
     <i class="fas fa-fw fa-dollar-sign"></i>
     <span>Ventas</span></a>
 </li>
 
-<li class="nav-item">
-  <a class="nav-link" href="?view=Marcas">
-  <i class="fab fa-adn"></i>
-    <span>Marcas</span></a>
-</li>
 
 <li class="nav-item">
   <a class="nav-link" href="?view=Comentarios">
     <i class="fas fa-fw fa-comment-alt"></i>
     <span>Comentarios</span></a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="?view=Usuarios">
+    <i class="fas fa-fw fa-user"></i>
+    <span>Usuarios</span></a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="?view=Clientes">
+    <i class="fas fa-fw fa-user-astronaut"></i>
+    <span>Clientes</span></a>
 </li>
 
 <li class="nav-item">
@@ -104,7 +112,7 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Utilidad Personalizadas:</h6>
       <a class="collapse-item" href="?view=Roles">Roles de usuarios</a>
-      <a class="collapse-item" href="utilities-.html">Categorias</a>
+      <a class="collapse-item" href="?view=Categorias">Categorias</a>
       <a class="collapse-item" href="?view=Marcas">Marcas</a>
     </div>
   </div>
@@ -320,12 +328,12 @@
       <!-- Nav Item - User Information -->
       <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-          <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+          <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $data->nombres." ".$data->apellidos; ?></span>
+          <img class="img-profile rounded-circle" src="assets/img/Image_Perfil/<?php echo $data->imagen; ?>">
         </a>
         <!-- Dropdown - User Information -->
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">
+          <a class="dropdown-item" href="?view=Usuarios&action=AccountView">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             Profile
           </a>

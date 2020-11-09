@@ -5,7 +5,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Proyecto de POO</span>
+            <span>Copyright &copy; Your Website 2020</span>
           </div>
         </div>
       </footer>
@@ -25,15 +25,38 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">
+          <?php 
+            if($data->sexo == 1) { 
+              echo "¿Listo para salir?"; 
+            }
+            else if($data->sexo == 2){
+              echo "¿Lista para salir?"; 
+            }else{
+              echo "¿Quiere salir?"; 
+            }
+          ?>     
+          </h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">
+
+          <?php 
+            if($data->sexo == 1) { 
+              echo 'Seleccione <strong>"Cerrar sesión"</strong> a continuación si está listo para finalizar su sesión actual.'; 
+            }
+            else if($data->sexo == 2){
+              echo 'Seleccione <strong>"Cerrar sesión"</strong> a continuación si está lista para finalizar su sesión actual.'; 
+            }else{
+              echo 'Seleccione <strong>"Cerrar sesión"</strong> a continuación si quiere finalizar su sesión actual.'; 
+            }
+          ?> 
+        </div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="?view=Autentificacion&action=Index">Cerrar Sesión</a>
         </div>
       </div>
     </div>
@@ -55,13 +78,33 @@
   <!-- Page level custom scripts -->
   <script src="assets/js/demo/datatables-demo.js"></script>
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="assets/js/demo/chart-area-demo.js"></script>
+  <script src="assets/js/demo/chart-pie-demo.js"></script>
+  <script src="assets/js/custom-file-input.js"></script>
+  <script src="assets/js/jquery.validate.js"></script>
   <script>
-    $(document).ready( function () {
-        $('.alert').alert();
-        $('[data-toggle="tooltip"]').tooltip();
-    } );
+    $(function () {
+      $.validator.addMethod("passwordcheck", function(value) {
+        return /^[a-zA-Z0-9!@#$%^&()=[]{};':"\|,.<>\/?+-]+$/.test(value) 
+        && /[a-z]/.test(value) // has a lowercase letter 
+        && /\d/.test(value)//has a digit 
+        && /[!@#$%^&()=[]{};':"\|,.<>\/?+-]/.test(value)// has a special character
+      },"La contraseña debe contener de 8 a 15 carácteres alfanuméricos (a-z A-Z), contener mínimo un dígito (0-9) y un carácter especial (_-=)."  
+      );
+
+      $("#formregistro").validate({
+        rules: {  
+          pass: {required:true,minlength:8,maxlength:15,passwordcheck:true },
+          passRepear: {required:true,equalTo:"#pass",passwordcheck:true }
+        },
+        messages: {
+          pass: "Formato contraseña incorrecto.",
+          passRepear: "Formato contraseña incorrecto."
+        },
+        errorLabelContainer: "dt",
+        wrapper: "dd"
+      });
+      });
   </script>
 </body>
 </html>
