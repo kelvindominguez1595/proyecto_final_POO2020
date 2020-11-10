@@ -15,14 +15,14 @@ class Comentarios{
         }
     }
 
-    public function RegistrarComentario($data){
+    public function RegistrarComentarios($data){
         try{
             // Comando SQL
             $sql = "INSERT INTO comentarios(producto_id, rating, comentario) VALUES(?,?,?)";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->producto_id, $data->rating, $data->comentario));
+            $resul = $pre->execute(array($data->producto_id, $data->rating, $data->comentario,));
             if($resul > 0){ 
                 return true;
             }else{ 

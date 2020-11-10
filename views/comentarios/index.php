@@ -12,7 +12,7 @@
                 </button>
             </div>
       <?php } ?>
-      <a href="?view=Comentarios&action=NuevoComentario" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-save fa-sm "></i> Crear comentarios</a>
+      <a href="?view=Comentarios&action=NuevoComentarios" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-save fa-sm "></i> Crear comentarios</a>
     </div>
 
     <div class="card shadow mb-4">

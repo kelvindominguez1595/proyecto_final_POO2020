@@ -12,7 +12,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">Nuevo comentario</h6>
                 </div>
                 <div class="card-body">
-                    <form action="?view=Comentarios&action=CrearComentario" method="post" class="user">
+                    <form action="?view=Comentarios&action=CrearComentarios" method="post" class="user">
                     <div class="form-group row">
                         <div class="col-sm-2 mb-3 mb-sm-0">
                             <input type="number" name="producto_id" id="" min="0"  class="form-control form-control-user" placeholder="Producto_id">
