@@ -12,7 +12,7 @@
                 </button>
             </div>
       <?php } ?>
-      <a href="?view=Marcas&action=NuevoMarca" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fab fa-adn"></i> Agregar Marca</a>
+      <a href="?view=Marcas&action=NuevoMarcas" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fab fa-adn"></i> Agregar Marca</a>
     </div>
 
     <div class="card shadow mb-4">

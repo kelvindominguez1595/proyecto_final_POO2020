@@ -22,20 +22,20 @@ class ComentariosController{
         require_once 'views/footer.php';
     }
 
-    public function EditarRol(){
+    public function EditarComentarios(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         // crear el metodo para listar un dato especifico
         $data = $this->model->obtenerRegistro($id);
         require_once 'views/header.php';
-        require_once 'views/roles/editar.php';
+        require_once 'views/comentarios/editar.php';
         require_once 'views/footer.php';
     }
-    public function BorrarRol(){
+    public function BorrarComentarios(){
         // Capturamos el id enviado por get
         $id = $_REQUEST['id'];
         require_once 'views/header.php';
-        require_once 'views/roles/borrar.php';
+        require_once 'views/comentarios/borrar.php';
         require_once 'views/footer.php';
     }
     /** Fin de llamado de la vistas */
@@ -62,13 +62,14 @@ class ComentariosController{
         }
     }
 
-    public function ActualizarRol(){
+    public function ActualizarComentarios(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
-        $this->model->nombre = $_REQUEST['nombre'];
-        $this->model->descripcion = $_REQUEST['descripcion'];
+        $this->model->producto_id  = $_REQUEST['producto_id'];
+        $this->model->rating       = $_REQUEST['rating'];
+        $this->model->comentario   = $_REQUEST['comentario'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->RegistrarRol($this->model)){
+        if($this->model->actualizarComentarios($this->model)){
             $texto = "Actualizó exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);
@@ -79,11 +80,11 @@ class ComentariosController{
         }
     }
 
-    public function BorrarIDRol(){
+    public function BorrarComentario(){
         // capturo los valores enviados por post o get
         $this->model->id = $_REQUEST['id'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->deleteRol($this->model)){            
+        if($this->model->BorrarComentario($this->model)){            
             $texto = "Registro borrado exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

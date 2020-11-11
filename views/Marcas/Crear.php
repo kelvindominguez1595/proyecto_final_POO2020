@@ -11,7 +11,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">Nuevo marca</h6>
                 </div>
                 <div class="card-body">
-                    <form action="?view=Marcas&action=CrearMarcas" method="post" class="user">
+                    <form action="?view=Marcas&action=NuevoMarcas" method="post" class="user">
                     <div class="form-group row">
                         <div class="col-sm-5 mb-3 mb-sm-0">
                         <input type="text" name="nombre_marca" class="form-control form-control-user" required id="exampleFirstName" placeholder="Nombre de la marca">

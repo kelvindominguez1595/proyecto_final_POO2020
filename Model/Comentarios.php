@@ -46,7 +46,7 @@ class Comentarios{
     // Metodo para obtener un registro en especifico
     public function obtenerRegistro($id){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM roles_usuario WHERE id = ?");
+            $commd = $this->DB->prepare("SELECT * FROM comentarios WHERE id = ?");
             $commd->execute(array($id));
             return $commd->fetch(PDO::FETCH_OBJ);
         }catch(Throwable $t){
@@ -55,14 +55,14 @@ class Comentarios{
     }
 
     // Actualizar
-    public function actualizarRol($data){
+    public function actualizarComentarios($data){
         try{
             // Comando SQL
-            $sql = "UPDATE roles_usuario SET nombre = ?, descripcion = ? WHERE id = ?";
+            $sql = "UPDATE comentarios SET producto_id = ?, rating = ?, comentario= ? WHERE id = ?";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre, $data->descripcion, $data->id));
+            $resul = $pre->execute(array($data->producto_id, $data->rating, $data->comentario, $data->id));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -73,10 +73,10 @@ class Comentarios{
         }
     }
     // Borrar
-    public function deleteRol($data){
+    public function BorrarComentario($data){
         try{
             // Comando SQL
-            $sql = "DELETE FROM roles_usuario  WHERE id = ?";
+            $sql = "DELETE FROM comentarios WHERE id = ?";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->id));

@@ -16,7 +16,7 @@ class Marcas{
     public function RegistrarMarca($data){
         try{
             // Comando SQL
-            $sql = "INSERT INTO Marcas(nombre_marca) VALUES(?)";
+            $sql = "INSERT INTO marcas(nombre_marca) VALUES(?)";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->nombre_marca));
@@ -32,7 +32,7 @@ class Marcas{
     // Metodo para listar los roles
     public function ListarMarcas(){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM Marcas");
+            $commd = $this->DB->prepare("SELECT * FROM marcas");
             $commd->execute();
             return $commd->fetchAll(PDO::FETCH_OBJ);
         }catch(Throwable $t){
@@ -43,7 +43,7 @@ class Marcas{
     // Metodo para obtener un registro en especifico
     public function obtenerRegistro($id){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM Marcas WHERE nombre_marca = ?");
+            $commd = $this->DB->prepare("SELECT * FROM marcas WHERE nombre_marca = ?");
             $commd->execute(array($id));
             return $commd->fetch(PDO::FETCH_OBJ);
         }catch(Throwable $t){
@@ -55,7 +55,7 @@ class Marcas{
     public function ActualizarMarca($data){
         try{
             // Comando SQL
-            $sql = "UPDATE Marcas SET nombre_marca = ?";
+            $sql = "UPDATE marcas SET nombre_marca = ?";
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
@@ -70,10 +70,10 @@ class Marcas{
         }
     }
     // Borrar
-    public function BorrarMarca($data){
+    public function BorrarMarcas($data){
         try{
             // Comando SQL
-            $sql = "DELETE FROM Marcas  WHERE nombre_marca = ?";
+            $sql = "DELETE FROM marcas  WHERE nombre_marca = ?";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->id));
