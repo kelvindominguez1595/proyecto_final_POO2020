@@ -34,7 +34,7 @@ class MarcasController{
     }
     public function BorrarMarcas(){
         // Capturamos el id enviado por get
-        $id = $_REQUEST['nombre_marca'];
+        $id = $_REQUEST['id'];
         require_once 'views/header.php';
         require_once 'views/Marcas/Borrar.php';
         require_once 'views/footer.php';
@@ -42,9 +42,10 @@ class MarcasController{
     /** Fin de llamado de la vistas */
 
     /** Metodos CRUD */   
-    public function RegistrarMarca(){
+    public function CrearMarcas(){
         // capturo los valores enviados por post o get
         $this->model->nombre_marca   = $_REQUEST['nombre_marca'];
+
         // utilizamos el metodo de guardar de SQL
         if($this->model->RegistrarMarca($this->model)){
             $texto = "Registro exitosamente";
@@ -57,11 +58,13 @@ class MarcasController{
         }
     }
 
-    public function ActualizarMarc(){
+    public function ActualizarMarcas(){
         // capturo los valores enviados por post o get
+        $this->model->id   = $_REQUEST['id'];
         $this->model->nombre_marca   = $_REQUEST['nombre_marca'];
+
         // utilizamos el metodo de guardar de SQL
-        if($this->model->actualizarMarca($this->model)){
+        if($this->model->actualizarMarc($this->model)){
             $texto = "Actualizó exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);
@@ -72,11 +75,11 @@ class MarcasController{
         }
     }
 
-    public function BorrarMarc(){
+    public function BorrarMarca(){
         // capturo los valores enviados por post o get
-        $this->model->id = $_REQUEST['nombre_marca'];
+        $this->model->id = $_REQUEST['id'];
         // utilizamos el metodo de guardar de SQL
-        if($this->model->BorrarMarca($this->model)){            
+        if($this->model->BorrarMarc($this->model)){            
             $texto = "Marca borrada exitosamente";
             $tipo = "success";
             $this->model->SesionesMessage($texto, $tipo);

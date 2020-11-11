@@ -2,7 +2,9 @@
 class Marcas{
     # atributos 
     private $DB; // para la conexion de la base de datos
+    public $id ;
     public $nombre_marca;
+
 
 
     public function __CONSTRUCT(){
@@ -43,7 +45,7 @@ class Marcas{
     // Metodo para obtener un registro en especifico
     public function obtenerRegistro($id){
         try{        
-            $commd = $this->DB->prepare("SELECT * FROM marcas WHERE nombre_marca = ?");
+            $commd = $this->DB->prepare("SELECT * FROM marcas WHERE id = ?");
             $commd->execute(array($id));
             return $commd->fetch(PDO::FETCH_OBJ);
         }catch(Throwable $t){
@@ -52,14 +54,14 @@ class Marcas{
     }
 
     // Actualizar
-    public function ActualizarMarca($data){
+    public function actualizarMarc($data){
         try{
             // Comando SQL
-            $sql = "UPDATE marcas SET nombre_marca = ?";
+            $sql = "UPDATE marcas SET nombre_marca = ? WHERE = id = ?" ;
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
-            $resul = $pre->execute(array($data->nombre_marca));
+            $resul = $pre->execute(array($data->nombre_marca, $data->id));
             if($resul > 0){ 
                 return true;
             }else{ 
@@ -70,10 +72,10 @@ class Marcas{
         }
     }
     // Borrar
-    public function BorrarMarcas($data){
+    public function BorrarMarc($data){
         try{
             // Comando SQL
-            $sql = "DELETE FROM marcas  WHERE nombre_marca = ?";
+            $sql = "DELETE FROM marcas  WHERE id = ?";
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
             $resul = $pre->execute(array($data->id));

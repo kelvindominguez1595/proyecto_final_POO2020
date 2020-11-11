@@ -11,7 +11,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">Editar marca</h6>
                 </div>
                 <div class="card-body">
-                    <form action="?view=Marcas&action=EditarMarcas" method="post" class="user">
+                    <form action="?view=Marcas&action=ActualizarMarcas" method="post" class="user">
                     <div class="form-group row">
                         <div class="col-sm-5 mb-3 mb-sm-0">
                         <input type="hidden"name="id" value="<?php echo $data->id ; ?>">
