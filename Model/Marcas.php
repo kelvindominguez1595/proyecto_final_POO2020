@@ -57,7 +57,7 @@ class Marcas{
     public function actualizarMarc($data){
         try{
             // Comando SQL
-            $sql = "UPDATE marcas SET nombre_marca = ? WHERE = id = ?" ;
+            $sql = "UPDATE marcas SET nombre_marca = ? WHERE id = ? " ;
 
             // COMENZAMOS LA CONEXION CON PDO
             $pre = $this->DB->prepare($sql);
