@@ -36,6 +36,7 @@ class Productos{
             die($t->getMessage());
         }
     }
+    
     // Metodo para listar los roles
     public function ListarProductos(){
         try{        
