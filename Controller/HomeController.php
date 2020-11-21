@@ -18,5 +18,10 @@ class HomeController{
         require_once 'views/frontend/Home/index.php';
         require_once 'views/frontend/footer.php';
     }
+    public function Shopping(){
+        require_once 'views/frontend/header.php';
+        require_once 'views/frontend/Shopping/index.php';
+        require_once 'views/frontend/footer.php';
+}
 }
 ?>
