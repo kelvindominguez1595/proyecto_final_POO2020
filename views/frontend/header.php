@@ -111,11 +111,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="shop.php">Shop page</a></li>
-                        <li><a href="SingleProduct.php">Single product</a></li>
                         <li><a href="cart.html">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">Others</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>  
