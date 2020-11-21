@@ -1,5 +1,11 @@
 <?php
+require_once 'Model/Usuarios.php';
 class HomeController{
+    private $model;
+
+    public function __CONSTRUCT(){
+        $this->model = new Usuarios();
+    }
 
     public function Index(){
         require_once 'views/header.php';
