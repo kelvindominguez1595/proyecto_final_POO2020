@@ -28,5 +28,10 @@ public function SingleProduct(){
     require_once 'views/frontend/SingleProduct/index.php';
     require_once 'views/frontend/footer.php';
 }
+public function Contacto(){
+    require_once 'views/frontend/header.php';
+    require_once 'views/frontend/Contacto/index.php';
+    require_once 'views/frontend/footer.php';
+}
 }
 ?>

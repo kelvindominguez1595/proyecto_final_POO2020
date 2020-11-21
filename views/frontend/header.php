@@ -111,8 +111,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="shop.php">Shop page</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="cart.html">Carrito</a></li>
+                        <li><a href="Contacto.php">Contacto</a></li>
                     </ul>
                 </div>  
             </div>
