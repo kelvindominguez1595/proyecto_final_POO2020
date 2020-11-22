@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <div class="footer-about-us">
-                        <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                <div class="footer-about-us">
+                        <h2>U <span>stora</span></h2>
+                        <p>Somos la tienda online de venta de productos electronicos de tecnologia de ultimo momento de facil uso para cualquier usuario.</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -17,25 +17,25 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title">Navegacion de usuario </h2>
                         <ul>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Order history</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Vendor contact</a></li>
-                            <li><a href="#">Front page</a></li>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Ordenar historial</a></li>
+                            <li><a href="#">Lista de deseo</a></li>
+                            <li><a href="#">Contacto del vendedor</a></li>
+                            <li><a href="#">Pagina de inicio</a></li>
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                    <h2 class="footer-wid-title">Categorias</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
+                            <li><a href="#">Telefono Celular</a></li>
+                            <li><a href="#">Accesorios del hogar</a></li>
                             <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
+                            <li><a href="#">Computadoras</a></li>
                             <li><a href="#">Gadets</a></li>
                         </ul>                        
                     </div>
@@ -43,12 +43,12 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                        <h2 class="footer-wid-title">Nuevo correo</h2>
+                        <p>Suscríbase a nuestro boletín y obtenga ofertas exclusivas que no encontrará en ningún otro lugar directamente en su bandeja de entrada!</p>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" placeholder="Escribe tu correo">
+                                <input type="submit" value="Suscribete">
                             </form>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2020 Ustora. Todos los derechos reservados. <a href="http://www.freshdesignweb.com" target="_blank"></a></p>
                     </div>
                 </div>
                 

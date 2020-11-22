@@ -51,25 +51,25 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo1">
                         <i class="fa fa-refresh"></i>
-                        <p>30 Days return</p>
+                        <p>30 Dias de devolucion</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo2">
                         <i class="fa fa-truck"></i>
-                        <p>Free shipping</p>
+                        <p>Envio gratis</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo3">
                         <i class="fa fa-lock"></i>
-                        <p>Secure payments</p>
+                        <p>Pagos Seguros</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo4">
                         <i class="fa fa-gift"></i>
-                        <p>New products</p>
+                        <p>Nuevos Productos</p>
                     </div>
                 </div>
             </div>
@@ -78,14 +78,22 @@
     
     <div class="maincontent-area">
         <div class="zigzag-bottom"></div>
+<<<<<<< HEAD
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
 
+=======
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="latest-product">
+>>>>>>> af6168df741b6baaad31b94d1ebc777dcd337518
                         <h2 class="section-title">Latest Products</h2>
                         <div class="product-carousel">
                             <div class="single-product">
+<<<<<<< HEAD
                                 <div class="product-f-image">
                                 <?php     
                              foreach($this->model->ListarProductos() as $item){  
@@ -93,7 +101,12 @@
                                 <img src="assets/img/<?php echo $item->imagen; ?>" alt="">
                                 <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+<<<<<<< HEAD
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+=======
+                                        <a href="SingleProduct.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    </div>
+>>>>>>> af6168df741b6baaad31b94d1ebc777dcd337518
                                 </div>
                                 </div>
                                 <h2><a href="single-product.html"><?php echo $item->NombreProducto;?></a></h2>
@@ -106,7 +119,7 @@
                                   
                                   
                                 
-                                <h2><a href="single-product.html">Samsung Galaxy s5- 2015</a></h2>
+                                <h2><a href="SingleProduct.php">Samsung Galaxy s5- 2015</a></h2>
                                 
                                 <div class="product-carousel-price">
                                     <ins>$700.00</ins> <del>$100.00</del>
@@ -116,9 +129,18 @@
                                 <div class="product-f-image">
                                     <img src="assets/tiendastyles/img/product-2.jpg" alt="">
                                     <div class="product-hover">
+=======
+                                <div class="product-g-image">
+                                 <?php     
+                                 foreach($this->model->ListarProductos() as $item){  
+                                   ?>  
+                                   <img src="assets/img/<?php echo $item->imagen; ?>" alt=""> 
+                                   <div class="product-hover">
+>>>>>>> 223d3a6 (Listado de productos casi completado)
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="SingleProduct.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
+<<<<<<< HEAD
                                 </div>
                                 
                                 <h2>Nokia Lumia 1320</h2>
@@ -131,7 +153,7 @@
                                     <img src="assets/tiendastyles/img/product-3.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="SingleProduct.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                 
@@ -146,7 +168,7 @@
                                     <img src="assets/tiendastyles/img/product-4.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="SingleProduct.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                 
@@ -161,7 +183,7 @@
                                     <img src="assets/tiendastyles/img/product-5.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="SingleProduct.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                 
@@ -176,15 +198,29 @@
                                     <img src="assets/tiendastyles/img/product-6.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="SingleProduct.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
+                                <h2><a href="SingleProduct.php">Samsung gallaxy note 4</a></h2>
 
                                 <div class="product-carousel-price">
                                     <ins>$400.00</ins>
                                 </div>                            
+=======
+                                    </div>
+                                    <h2><a href="single-product.html"><?php echo $item->NombreProducto;?></a></h2>
+                                    <div class="product-carousel-price">
+                                      <ins><?php echo $item->precioVenta; ?></ins> <del>$100.00</del>
+                                    </div>  
+                                    <?php
+                                     }   
+                                    ?>
+                                 </div>  
+                                  
+                                  
+                                                 
+>>>>>>> 223d3a6 (Listado de productos casi completado)
                             </div>
                         </div>
                     </div>
@@ -223,8 +259,8 @@
                         <h2 class="product-wid-title">Top Sellers</h2>
                         <a href="" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Sony Smart TV - 2015</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -237,8 +273,8 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Apple new mac book 2015</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -251,8 +287,8 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new i phone 6</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Apple new i phone 6</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -271,8 +307,8 @@
                         <h2 class="product-wid-title">Recently Viewed</h2>
                         <a href="#" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Sony playstation microsoft</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -284,9 +320,9 @@
                                 <ins>$400.00</ins> <del>$425.00</del>
                             </div>                            
                         </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
+                        <div class="single-product-widget">
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Sony Smart Air Condtion</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -298,9 +334,9 @@
                                 <ins>$400.00</ins> <del>$425.00</del>
                             </div>                            
                         </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
+                        <div class="single-product-widget">
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Samsung gallaxy note 4</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -319,8 +355,8 @@
                         <h2 class="product-wid-title">Top New</h2>
                         <a href="#" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new i phone 6</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Apple new i phone 6</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -333,8 +369,8 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Samsung gallaxy note 4</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -347,8 +383,8 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="assets/tiendastyles/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
+                            <a href="SingleProduct.php"><img src="assets/tiendastyles/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                            <h2><a href="SingleProduct.php">Sony playstation microsoft</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
