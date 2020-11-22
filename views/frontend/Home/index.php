@@ -82,16 +82,29 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
+
                         <h2 class="section-title">Latest Products</h2>
                         <div class="product-carousel">
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="assets/tiendastyles/img/product-1.jpg" alt="">
-                                    <div class="product-hover">
+                                <?php     
+                             foreach($this->model->ListarProductos() as $item){  
+                                ?>     
+                                <img src="assets/img/<?php echo $item->imagen; ?>" alt="">
+                                <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
                                 </div>
+                                </div>
+                                <h2><a href="single-product.html"><?php echo $item->NombreProducto;?></a></h2>
+                                <div class="product-carousel-price">
+                                   <ins><?php echo $item-precioventa; ?></ins> <del>$100.00</del>
+                                </div>
+                                 <?php 
+                                  }
+                                ?>
+                                  
+                                  
                                 
                                 <h2><a href="single-product.html">Samsung Galaxy s5- 2015</a></h2>
                                 
@@ -188,7 +201,7 @@
                     <div class="brand-wrapper">
                         <div class="brand-list">
                         <?php     
-                        foreach($this->model->ListarUsuarios() as $item){  
+                        foreach($this->model->ListarProductos() as $item){  
                             ?>     
                             <img src="assets/img/Image_Perfil/<?php echo $item->imagen; ?>" alt="">
                             <?php

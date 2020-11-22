@@ -1,10 +1,10 @@
 <?php
-require_once 'Model/Usuarios.php';
+require_once 'Model/Productos.php';
 class HomeController{
     private $model;
 
     public function __CONSTRUCT(){
-        $this->model = new Usuarios();
+        $this->model = new Productos();
     }
 
     public function Index(){
