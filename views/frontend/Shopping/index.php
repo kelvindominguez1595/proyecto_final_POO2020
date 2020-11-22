@@ -9,12 +9,16 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
                                                                         <form action="index.php" method="POST">
                                                                     Buscar productos
                                                                     <input type="text" id="keywords" name="keywords" size="30" maxlength="30">
                                                                     <input type="submit" name="search" id="search" value="Buscar">
                                                                     </form>
 
+=======
+    
+>>>>>>> 223d3a6 (Listado de productos casi completado)
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
