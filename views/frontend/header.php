@@ -12,9 +12,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
-	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	/>
 	<script>
-		addEventListener("load", function() {
+		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
 
@@ -39,7 +40,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- web fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
 	<!-- //web fonts -->
 
 </head>
@@ -553,8 +555,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- logo -->
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
-						<a href="index.html" class="font-weight-bold font-italic">
-							<img src="images/logo2.png" alt=" " class="img-fluid">Electro Store
+						<a href="index.php" class="font-weight-bold font-italic">
+							<img src="assets/tiendastyles/images/logo2.png" alt=" " class="img-fluid">Electro Store
 						</a>
 					</h1>
 				</div>
@@ -596,95 +598,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
 					<form action="#" method="post">
-							<?php
-							$categoryList = arboldeCategorias();
-							?>
-
-							<select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
-								<?php foreach ($categoryList as $categoria) { ?>
-									<option value="<?php echo $cl["id"] ?>"><?php echo $cl["categoria"]; ?></option>
-								<?php } ?>
-							</select>
-						</select>
-					</form>
+						Categorias
+						<select <?php $i = 1;
+                  foreach($this->model->ListarCategorias() as $item){ 
+				  }
+				?>>
+					<option value="" categoria></option>
+					</select>
 				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				    aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="index.html">Home
+							<a class="nav-link" href="index.php">Home
 								<span class="sr-only">(current)</span>
 							</a>
-						</li>
-						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Electronics
-							</a>
-							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">Mobiles, Computers</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.html">All Mobile Phones</a>
-												</li>
-												<li>
-													<a href="product.html">All Mobile Accessories</a>
-												</li>
-												<li>
-													<a href="product.html">Cases & Covers</a>
-												</li>
-												<li>
-													<a href="product.html">Screen Protectors</a>
-												</li>
-												<li>
-													<a href="product.html">Power Banks</a>
-												</li>
-												<li>
-													<a href="product.html">All Certified Refurbished</a>
-												</li>
-												<li>
-													<a href="product.html">Tablets</a>
-												</li>
-												<li>
-													<a href="product.html">Wearable Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Smart Home</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.html">Laptops</a>
-												</li>
-												<li>
-													<a href="product.html">Drives & Storage</a>
-												</li>
-												<li>
-													<a href="product.html">Printers & Ink</a>
-												</li>
-												<li>
-													<a href="product.html">Networking Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Computer Accessories</a>
-												</li>
-												<li>
-													<a href="product.html">Game Zone</a>
-												</li>
-												<li>
-													<a href="product.html">Software</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -782,7 +714,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
+							<a class="nav-link" href="?view=Home&actionContacto">Contact Us</a>
 						</li>
 					</ul>
 				</div>
