@@ -104,30 +104,39 @@
 												</div>
 											</div>
 										</div>
+
 										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Samsung Galaxy J7</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">$200.00</span>
-												<del>$280.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
-														<input type="hidden" name="amount" value="200.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="USD" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
+											<?php
+											foreach ($this->model->ListarProductos() as $item) {
+											?>
+
+												<img src="assets/img/<?php echo $item->imagen; ?>" alt="">
+												<h4 class="pt-1">
+													<a href="single.html"><?php echo $item->NombreProducto; ?></a>
+												</h4>
+												<div class="info-product-price my-2">
+													<span class="item_price"><?php echo number_format($item->precioVenta); ?></span>
+													<del>$280.00</del>
+												</div>
+												<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+													<form action="#" method="post">
+														<fieldset>
+															<input type="hidden" name="cmd" value="_cart" />
+															<input type="hidden" name="add" value="1" />
+															<input type="hidden" name="business" value=" " />
+															<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
+															<input type="hidden" name="amount" value="200.00" />
+															<input type="hidden" name="discount_amount" value="1.00" />
+															<input type="hidden" name="currency_code" value="USD" />
+															<input type="hidden" name="return" value=" " />
+															<input type="hidden" name="cancel_return" value=" " />
+															<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														</fieldset>
+													</form>
+												</div>
+											<?php
+											}
+											?>
 										</div>
 									</div>
 								</div>
