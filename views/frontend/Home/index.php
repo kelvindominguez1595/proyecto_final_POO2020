@@ -111,7 +111,7 @@
 											</div>
 											<div class="item-info-product text-center border-top mt-4">
 												<h4 class="pt-1">
-													<a href="single.php "><?php echo $item->NombreProducto; ?> </a>
+													<a href=" ?view=Home&action=SingleProduct "><?php echo $item->NombreProducto; ?> </a>
 												</h4>
 												<br>
 												<?php
