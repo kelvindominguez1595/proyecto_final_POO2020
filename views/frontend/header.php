@@ -555,7 +555,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- logo -->
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
-						<a href="index.php" class="font-weight-bold font-italic">
+						<a href="?view=Home&action=Home" class="font-weight-bold font-italic">
 							<img src="assets/tiendastyles/images/logo2.png" alt=" " class="img-fluid">Electro Store
 						</a>
 					</h1>

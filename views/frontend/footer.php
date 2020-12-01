@@ -57,22 +57,22 @@
 						<h3 class="text-white font-weight-bold mb-3">Categories</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="product.html">Mobiles </a>
+								<a href="?view=Home&action=Shopping">Mobiles </a>
 							</li>
 							<li class="mb-3">
-								<a href="product.html">Computers</a>
+								<a href="?view=Home&action=Shopping">Computers</a>
 							</li>
 							<li class="mb-3">
-								<a href="product.html">TV, Audio</a>
+								<a href="?view=Home&action=Shopping">TV, Audio</a>
 							</li>
 							<li class="mb-3">
-								<a href="product2.html">Smartphones</a>
+								<a href="?view=Home&action=Shopping">Smartphones</a>
 							</li>
 							<li class="mb-3">
-								<a href="product.html">Washing Machines</a>
+								<a href="?view=Home&action=Shopping">Washing Machines</a>
 							</li>
 							<li>
-								<a href="product2.html">Refrigerators</a>
+								<a href="?view=Home&action=Shopping">Refrigerators</a>
 							</li>
 						</ul>
 					</div>
@@ -85,7 +85,7 @@
 								<a href="about.html">About Us</a>
 							</li>
 							<li class="mb-3">
-								<a href="contact.html">Contact Us</a>
+								<a href="?view=Home&action=Contacto">Contact Us</a>
 							</li>
 							<li class="mb-3">
 								<a href="help.html">Help</a>
